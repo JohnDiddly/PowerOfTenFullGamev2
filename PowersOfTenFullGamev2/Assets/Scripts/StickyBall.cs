@@ -20,7 +20,7 @@ public class StickyBall : MonoBehaviour
     float distanceToCamera = 3;
 
     // ball size, starting at 1
-    float size = 1;
+    float size = 0.03f;
 
     // adding different groups
     public GameObject group1;
@@ -98,7 +98,7 @@ public class StickyBall : MonoBehaviour
         if (group1Unlocked == false)
         {
 
-            if (size >= 1)
+            if (size >= .03f)
             {
                 group1Unlocked = true;
                 for (int i = 0; i < group1.transform.childCount; i++)
@@ -151,6 +151,7 @@ public class StickyBall : MonoBehaviour
             }
 
         }
+        //leaving house size target ??
         else if (group5Unlocked == false)
         {
 
