@@ -130,9 +130,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group3.transform.childCount; i++)
                 {
                     group3.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 4.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 4.3f;
             }
 
         }
@@ -145,9 +145,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group4.transform.childCount; i++)
                 {
                     group4.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 5.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 5.3f;
             }
 
         }
@@ -161,9 +161,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group5.transform.childCount; i++)
                 {
                     group5.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 6.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 6.3f;
             }
 
         }
@@ -176,9 +176,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group6.transform.childCount; i++)
                 {
                     group6.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 7.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 7.3f;
             }
 
         }
@@ -191,9 +191,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group7.transform.childCount; i++)
                 {
                     group7.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 8.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 8.3f;
             }
 
         }
@@ -206,9 +206,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group8.transform.childCount; i++)
                 {
                     group8.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 9.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 9.3f;
             }
 
         }
@@ -221,9 +221,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group9.transform.childCount; i++)
                 {
                     group9.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 10.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 10.3f;
             }
 
         }
@@ -236,9 +236,9 @@ public class StickyBall : MonoBehaviour
                 for (int i = 0; i < group10.transform.childCount; i++)
                 {
                     group10.transform.GetChild(i).GetComponent<Collider>().isTrigger = true;
-                    // Change distance between camera and ball
-                    distanceToCamera = 11.3f;
                 }
+                // Change distance between camera and ball
+                distanceToCamera = 11.3f;
             }
 
         }
