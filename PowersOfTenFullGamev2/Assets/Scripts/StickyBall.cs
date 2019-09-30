@@ -17,7 +17,7 @@ public class StickyBall : MonoBehaviour
     Vector2 unitv2;
 
     public GameObject cameraReference;
-    float distanceToCamera = 3;
+    float distanceToCamera = 3f;
 
     // ball size, starting at (really small)
     float size = 0.00016f;
@@ -82,10 +82,10 @@ public class StickyBall : MonoBehaviour
     {
 
         // Apply force behind the ball
-        this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(unitv2.x, 0, unitv2.y) * z * 3);
+        this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(unitv2.x, 0, unitv2.y) * z * 1);
 
         // Set Camera Position Behidn the Ball based on rotation
-        cameraReference.transform.position = new Vector3(-unitv2.x * distanceToCamera, distanceToCamera, -unitv2.y * distanceToCamera) + this.transform.position;
+        cameraReference.transform.position = new Vector3(-unitv2.x * (distanceToCamera), distanceToCamera, -unitv2.y * (distanceToCamera)) + this.transform.position;
 
         unlockPickupGroups();
 
