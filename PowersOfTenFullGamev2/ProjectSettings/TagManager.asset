@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sticky
+  - StickyRice
+  - StickyCoin
+  - StickyGoblet
+  - StickyLamp
   layers:
   - Default
   - TransparentFX

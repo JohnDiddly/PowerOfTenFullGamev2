@@ -19,8 +19,8 @@ public class StickyBall : MonoBehaviour
     public GameObject cameraReference;
     float distanceToCamera = 3;
 
-    // ball size, starting at 1
-    float size = 0.03f;
+    // ball size, starting at (really small)
+    float size = 0.00016f;
 
     // adding different groups
     public GameObject group1;
@@ -98,7 +98,7 @@ public class StickyBall : MonoBehaviour
         if (group1Unlocked == false)
         {
 
-            if (size >= .03f)
+            if (size >= .00016f)
             {
                 group1Unlocked = true;
                 for (int i = 0; i < group1.transform.childCount; i++)
@@ -110,7 +110,7 @@ public class StickyBall : MonoBehaviour
         else if (group2Unlocked == false)
         {
 
-            if (size >= 1.08f)
+            if (size >= 0.0008f)
             {
                 group2Unlocked = true;
                 for (int i = 0; i < group2.transform.childCount; i++)
@@ -124,7 +124,7 @@ public class StickyBall : MonoBehaviour
         else if (group3Unlocked == false)
         {
 
-            if (size >= 1.18f)
+            if (size >= 0.02f)
             {
                 group3Unlocked = true;
                 for (int i = 0; i < group3.transform.childCount; i++)
@@ -139,7 +139,7 @@ public class StickyBall : MonoBehaviour
         else if (group4Unlocked == false)
         {
 
-            if (size >= 1.28f)
+            if (size >= 0.2f)
             {
                 group4Unlocked = true;
                 for (int i = 0; i < group4.transform.childCount; i++)
@@ -151,11 +151,11 @@ public class StickyBall : MonoBehaviour
             }
 
         }
-        //leaving house size target ??
+        //leaving house size target 1.0
         else if (group5Unlocked == false)
         {
 
-            if (size >= 1.38f)
+            if (size >= 1.00f)
             {
                 group5Unlocked = true;
                 for (int i = 0; i < group5.transform.childCount; i++)
@@ -275,6 +275,123 @@ public class StickyBall : MonoBehaviour
 
             }
         }
+
+
+
+
+        if (other.transform.CompareTag("StickyRice"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.00016f, 0.00016f, 0.00016f);
+                size += 0.00016f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to (five) decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 6).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(pickupSound);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+
+        if (other.transform.CompareTag("StickyCoin"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.0008f, 0.0008f, 0.0008f);
+                size += 0.0008f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to (five) decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 6).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(pickupSound);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+
+        if (other.transform.CompareTag("StickyGoblet"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.02f, 0.02f, 0.02f);
+                size += 0.02f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to (five) decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 6).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(pickupSound);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+
+        if (other.transform.CompareTag("StickyLamp"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
+                size += 0.2f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to (five) decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 6).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(pickupSound);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+
+
+
+
+
+
     }
 }
 
